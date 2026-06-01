@@ -1,0 +1,1156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Chorus: Multi-Teacher Pretraining for Holistic 3D Gaussian Scene Encoding"
+    />
+    <title>Chorus: Holistic 3D Gaussian Scene Encoding</title>
+    <link rel="icon" href="media/chorus_favicon.png" type="image/png" />
+    <link rel="stylesheet" href="static/css/style.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/",
+          "@sparkjsdev/spark": "https://sparkjs.dev/releases/spark/2.1.0/spark.module.js"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header class="topbar" id="topbar">
+      <a class="brand" href="#hero" aria-label="Chorus home">
+        <img src="media/chorus_icon.jpeg" alt="" />
+        <span>Chorus</span>
+      </a>
+      <nav class="topnav" aria-label="Page sections">
+        <a href="#info" class="toc-link">Info</a>
+        <a href="#motivation" class="toc-link">Motivation</a>
+        <a href="#demo" class="toc-link">Demo</a>
+        <a href="#method" class="toc-link">Method</a>
+        <a href="#one-more-thing" class="toc-link">One More Thing</a>
+        <a href="#applications" class="toc-link">Applications</a>
+        <span class="toc-indicator" aria-hidden="true"></span>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="hero" aria-label="Chorus fly-through showcase">
+        <div class="hero-media">
+          <video
+            class="hero-video is-active"
+            muted
+            playsinline
+            loop
+            preload="none"
+            poster="media/posters/hero_0026.jpg"
+            data-src="media/videos/hero_0026.mp4"
+          ></video>
+          <video
+            class="hero-video"
+            muted
+            playsinline
+            loop
+            preload="none"
+            poster="media/posters/hero_0032.jpg"
+            data-src="media/videos/hero_0032.mp4"
+          ></video>
+          <video
+            class="hero-video"
+            muted
+            playsinline
+            loop
+            preload="none"
+            poster="media/posters/hero_0210.jpg"
+            data-src="media/videos/hero_0210.mp4"
+          ></video>
+        </div>
+        <div class="hero-shade"></div>
+        <div class="hero-switcher" aria-label="Hero video selector">
+          <button class="hero-tab is-active" type="button" data-hero-index="0">
+            Scene 1
+          </button>
+          <button class="hero-tab" type="button" data-hero-index="1">
+            Scene 2
+          </button>
+          <button class="hero-tab" type="button" data-hero-index="2">
+            Scene 3
+          </button>
+        </div>
+      </section>
+
+      <div class="page">
+        <section class="section project-info" id="info">
+          <h2>
+            Chorus: Multi-Teacher Pretraining for Holistic 3D Gaussian Scene
+            Encoding
+          </h2>
+          <p class="presentation">CVPR 2026 Oral</p>
+
+          <div class="link-row" aria-label="Project links">
+            <a
+              class="pill-link"
+              href="https://arxiv.org/abs/2512.17817"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="link-icon arxiv-icon" aria-hidden="true">
+                <img src="media/icons/arxiv-logomark-small.svg" alt="" />
+              </span>
+              <span>Paper</span>
+            </a>
+            <a
+              class="pill-link"
+              href="https://github.com/GaussianWorld/Chorus"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="link-icon github-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    fill="currentColor"
+                    d="M12 2C6.48 2 2 6.58 2 12.26c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.88-2.78.62-3.37-1.22-3.37-1.22-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.35 1.12 2.92.86.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05A9.35 9.35 0 0 1 12 7c.85 0 1.7.12 2.5.34 1.9-1.33 2.74-1.05 2.74-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.38-.01 2.49-.01 2.83 0 .27.18.59.69.49A10.25 10.25 0 0 0 22 12.26C22 6.58 17.52 2 12 2Z"
+                  />
+                </svg>
+              </span>
+              <span>Code</span>
+            </a>
+            <a
+              class="pill-link"
+              href="https://huggingface.co/SceneSplatPro/Chorus"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="link-icon hf-icon" aria-hidden="true">
+                <img src="media/icons/huggingface-logo.svg" alt="" />
+              </span>
+              <span>Model</span>
+            </a>
+            <button
+              class="pill-link citation-pill"
+              type="button"
+              data-citation-copy
+              aria-label="Copy citation"
+            >
+              <span class="link-icon citation-icon" aria-hidden="true">
+                <img
+                  src="https://play-lh.googleusercontent.com/QM55RMdWtX5bxUv3TrO08jjrCACjfk1E_qqFifBifC2xORcQh5hQzhuG7lkTMl4Yz7BZ=w480-h960-rw"
+                  alt=""
+                />
+              </span>
+              <span>Citation</span>
+            </button>
+            <a
+              class="pill-link"
+              href="https://gaussianworld.github.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="link-icon linework-icon" aria-hidden="true">
+                <img src="media/icons/gaussianworld-icon.jpg" alt="" />
+              </span>
+              <span>Line of Work</span>
+            </a>
+          </div>
+
+          <p class="authors">
+            <a
+              href="https://unique1i.github.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Yue Li<sup>‡,*,1</sup></a
+            >,
+            <a
+              href="https://qimaqi.github.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Qi Ma<sup>*,2,3</sup></a
+            >,
+            <a
+              href="https://runyiyang.github.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Runyi Yang<sup>3</sup></a
+            >,
+            <a
+              href="https://scholar.google.com/citations?user=4_JSQPQAAAAJ"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Mengjiao Ma<sup>3</sup></a
+            >,
+            <a
+              href="https://amazingren.github.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Bin Ren<sup>4</sup></a
+            >,
+            <a
+              href="https://scholar.google.com/citations?user=aY2lypgAAAAJ"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Nikola Popovic<sup>3</sup></a
+            >,
+            <a
+              href="https://disi.unitn.it/~sebe/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Nicu Sebe<sup>4</sup></a
+            >,
+            <br class="author-line-break" />
+            <a
+              href="https://staff.science.uva.nl/th.gevers/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Theo Gevers<sup>1</sup></a
+            >,
+            <a
+              href="https://insait.ai/prof-luc-van-gool/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Luc Van Gool<sup>3</sup></a
+            >,
+            <a
+              href="https://insait.ai/dr-danda-paudel/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Danda Pani Paudel<sup>†,3</sup></a
+            >,
+            <a
+              href="https://oswaldm.github.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Martin R. Oswald<sup>†,1</sup></a
+            >
+          </p>
+
+          <p class="notes">
+            <sup>‡</sup> Project lead. <sup>*</sup> Equal contribution.
+            <sup>†</sup> Equal supervision.
+          </p>
+          <p class="institutions">
+            <sup>1</sup>University of Amsterdam, <sup>2</sup>ETH Zürich,
+            <sup>3</sup>INSAIT, Sofia University “St. Kliment Ohridski”,
+            <sup>4</sup>University of Trento
+          </p>
+        </section>
+
+        <section class="section" id="motivation">
+          <p class="eyebrow">Motivation</p>
+          <h2>From 3DGS Semantic Feature to Holistic Scene Encoder</h2>
+          <p class="section-lead">
+            <a
+              href="https://unique1i.github.io/SceneSplat_webpage/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >SceneSplat</a
+            >
+            showed that lifted 2D language features can supervise a feed-forward
+            3DGS scene encoder for open-vocabulary segmentation. Chorus starts
+            from the same 3DGS substrate, but asks for a broader representation:
+            a compact scene embedding that can support semantics, instances,
+            querying, and VLM reasoning.
+          </p>
+
+          <p class="limitation-label">Current 3DGS scene-encoder limitations</p>
+          <div
+            class="motivation-grid limitation-grid"
+            aria-label="Current 3DGS scene encoder limitations"
+          >
+            <article class="motivation-card">
+              <span>Open-vocabulary semantic focus</span>
+              <p>
+                Existing 3DGS scene encoder focuses on language-aligned,
+                open-vocabulary semantic learning. Objectness, correspondence,
+                and fine spatial structure are less directly supervised.
+              </p>
+            </article>
+            <article class="motivation-card">
+              <span>Limited embedding capability</span>
+              <p>
+                A reusable scene embedding should go beyond open-vocabulary
+                semantics: it should encode geometry, appearance, instance
+                structure, and supports multiple downstream tasks.
+              </p>
+            </article>
+            <article class="motivation-card">
+              <span>Token-heavy final features</span>
+              <p>
+                SceneSplat encoder can retain close to 10K pooled multi-level
+                tokens. LLM/VLM interfaces benefit from a smaller final-stage
+                scene representation.
+              </p>
+            </article>
+          </div>
+
+          <div class="tldr chorus-tldr">
+            <strong>Chorus</strong> addresses these limits by pretraining
+            general-purpose 3D scene encoders from Gaussian splats via
+            multi-teacher distillation of 2D foundation models. A shared 3DGS
+            backbone captures common scene factors, while lightweight
+            teacher-specific projectors absorb language-aligned, generalist, and
+            object-aware embedding differences.
+          </div>
+
+          <div class="motivation-takeaway" aria-label="Chorus takeaway">
+            <span>Multi-teacher supervision</span>
+            <span>Compact scene tokens</span>
+            <span>One encoder for diverse tasks</span>
+          </div>
+
+          <figure class="paper-figure teaser-figure">
+            <a href="media/teaser.pdf" aria-label="Open teaser figure PDF">
+              <img
+                src="media/teaser_transparent.png"
+                alt="Chorus teaser figure showing multi-teacher pretraining and evaluation"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+          </figure>
+        </section>
+
+        <section class="section" id="demo">
+          <p class="eyebrow">Demo</p>
+          <h2>Chorus Inference Feature PCA</h2>
+          <p class="section-lead">
+            At inference, Chorus processes an entire reconstructed scene in one
+            pass. The viewer pairs RGB rendering with learned feature PCA,
+            making the scene embedding visible. The toggle switches the PCA view
+            between Gaussian splats and their point-center proxy.
+          </p>
+
+          <div class="dataset-panel-stack" data-viewer-group>
+            <article
+              class="viewer-shell dataset-panel"
+              data-viewer-panel
+              data-dataset-id="interiorgs"
+              data-manifest="media/splats/manifest.json"
+            >
+              <div
+                class="viewer-toolbar dataset-panel-header"
+                aria-label="InteriorGS 3D viewer controls"
+              >
+                <div>
+                  <h3>InteriorGS Scenes</h3>
+                </div>
+                <div
+                  class="mode-toggle"
+                  aria-label="PCA render mode"
+                  data-role="mode-toggle"
+                  data-mode="3dgs"
+                >
+                  <span class="mode-thumb" aria-hidden="true"></span>
+                  <button
+                    class="mode-button is-active"
+                    type="button"
+                    data-pca-mode="3dgs"
+                  >
+                    3DGS
+                  </button>
+                  <button
+                    class="mode-button"
+                    type="button"
+                    data-pca-mode="points"
+                  >
+                    Centers
+                  </button>
+                </div>
+              </div>
+              <div class="scene-rail-wrap">
+                <div
+                  class="scene-rail"
+                  data-role="scene-rail"
+                  aria-label="InteriorGS scene selector"
+                ></div>
+              </div>
+              <div class="viewer-stage" data-role="viewer-stage">
+                <div class="viewer-placeholder" data-role="viewer-placeholder">
+                  <div>
+                    <p class="viewer-kicker">Interactive 3DGS viewer</p>
+                    <button
+                      class="load-viewer-button"
+                      type="button"
+                      data-viewer-load
+                    >
+                      Load InteriorGS Scene
+                    </button>
+                    <p class="viewer-status" data-role="viewer-status">Ready</p>
+                  </div>
+                </div>
+                <div
+                  class="viewer-canvases"
+                  data-role="viewer-canvases"
+                  aria-label="InteriorGS split 3D viewer"
+                ></div>
+                <div class="splitter" data-role="viewer-splitter" hidden>
+                  <span></span>
+                </div>
+                <div class="viewer-label left">Rendering</div>
+                <div class="viewer-label right" data-role="pca-label">
+                  Chorus PCA
+                </div>
+                <div class="viewer-controls" data-role="viewer-controls" hidden>
+                  <button
+                    type="button"
+                    data-view-control="zoom-in"
+                    title="Zoom in"
+                  >
+                    +
+                  </button>
+                  <button
+                    type="button"
+                    data-view-control="zoom-out"
+                    title="Zoom out"
+                  >
+                    -
+                  </button>
+                  <button
+                    type="button"
+                    data-view-control="reset"
+                    title="Reset view"
+                  >
+                    R
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="viewer-shell dataset-panel"
+              data-viewer-panel
+              data-dataset-id="hm3d"
+              data-manifest="media/splats/manifest.json"
+            >
+              <div
+                class="viewer-toolbar dataset-panel-header"
+                aria-label="HM3D 3D viewer controls"
+              >
+                <div>
+                  <h3>HM3D Scenes</h3>
+                </div>
+                <div
+                  class="mode-toggle"
+                  aria-label="PCA render mode"
+                  data-role="mode-toggle"
+                  data-mode="3dgs"
+                >
+                  <span class="mode-thumb" aria-hidden="true"></span>
+                  <button
+                    class="mode-button is-active"
+                    type="button"
+                    data-pca-mode="3dgs"
+                  >
+                    3DGS
+                  </button>
+                  <button
+                    class="mode-button"
+                    type="button"
+                    data-pca-mode="points"
+                  >
+                    Centers
+                  </button>
+                </div>
+              </div>
+              <div class="scene-rail-wrap">
+                <div
+                  class="scene-rail"
+                  data-role="scene-rail"
+                  aria-label="HM3D scene selector"
+                ></div>
+              </div>
+              <div class="viewer-stage" data-role="viewer-stage">
+                <div class="viewer-placeholder" data-role="viewer-placeholder">
+                  <div>
+                    <p class="viewer-kicker">Interactive 3DGS viewer</p>
+                    <button
+                      class="load-viewer-button"
+                      type="button"
+                      data-viewer-load
+                    >
+                      Load HM3D Scene
+                    </button>
+                    <p class="viewer-status" data-role="viewer-status">Ready</p>
+                  </div>
+                </div>
+                <div
+                  class="viewer-canvases"
+                  data-role="viewer-canvases"
+                  aria-label="HM3D split 3D viewer"
+                ></div>
+                <div class="splitter" data-role="viewer-splitter" hidden>
+                  <span></span>
+                </div>
+                <div class="viewer-label left">Rendering</div>
+                <div class="viewer-label right" data-role="pca-label">
+                  Chorus PCA
+                </div>
+                <div class="viewer-controls" data-role="viewer-controls" hidden>
+                  <button
+                    type="button"
+                    data-view-control="zoom-in"
+                    title="Zoom in"
+                  >
+                    +
+                  </button>
+                  <button
+                    type="button"
+                    data-view-control="zoom-out"
+                    title="Zoom out"
+                  >
+                    -
+                  </button>
+                  <button
+                    type="button"
+                    data-view-control="reset"
+                    title="Reset view"
+                  >
+                    R
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="viewer-shell dataset-panel"
+              data-viewer-panel
+              data-dataset-id="marble"
+              data-manifest="media/splats/manifest.json"
+            >
+              <div
+                class="viewer-toolbar dataset-panel-header"
+                aria-label="Marble 3D viewer controls"
+              >
+                <div>
+                  <h3>Marble Generated Scenes</h3>
+                </div>
+                <div
+                  class="mode-toggle"
+                  aria-label="PCA render mode"
+                  data-role="mode-toggle"
+                  data-mode="3dgs"
+                >
+                  <span class="mode-thumb" aria-hidden="true"></span>
+                  <button
+                    class="mode-button is-active"
+                    type="button"
+                    data-pca-mode="3dgs"
+                  >
+                    3DGS
+                  </button>
+                  <button
+                    class="mode-button"
+                    type="button"
+                    data-pca-mode="points"
+                  >
+                    Centers
+                  </button>
+                </div>
+              </div>
+              <div class="scene-rail-wrap">
+                <div
+                  class="scene-rail"
+                  data-role="scene-rail"
+                  aria-label="Marble scene selector"
+                ></div>
+              </div>
+              <div class="viewer-stage" data-role="viewer-stage">
+                <div class="viewer-placeholder" data-role="viewer-placeholder">
+                  <div>
+                    <p class="viewer-kicker">Interactive 3DGS viewer</p>
+                    <button
+                      class="load-viewer-button"
+                      type="button"
+                      data-viewer-load
+                    >
+                      Load Marble Scene
+                    </button>
+                    <p class="viewer-status" data-role="viewer-status">Ready</p>
+                  </div>
+                </div>
+                <div
+                  class="viewer-canvases"
+                  data-role="viewer-canvases"
+                  aria-label="Marble split 3D viewer"
+                ></div>
+                <div class="splitter" data-role="viewer-splitter" hidden>
+                  <span></span>
+                </div>
+                <div class="viewer-label left">Rendering</div>
+                <div class="viewer-label right" data-role="pca-label">
+                  Chorus PCA
+                </div>
+                <div class="viewer-controls" data-role="viewer-controls" hidden>
+                  <button
+                    type="button"
+                    data-view-control="zoom-in"
+                    title="Zoom in"
+                  >
+                    +
+                  </button>
+                  <button
+                    type="button"
+                    data-view-control="zoom-out"
+                    title="Zoom out"
+                  >
+                    -
+                  </button>
+                  <button
+                    type="button"
+                    data-view-control="reset"
+                    title="Reset view"
+                  >
+                    R
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="method">
+          <p class="eyebrow">Method</p>
+          <h2>Chorus Pipeline</h2>
+          <p class="section-lead">
+            Chorus distills language-aligned, generalist, and object-aware 2D
+            teacher signals into a shared scene embedding using lightweight
+            per-teacher projectors. The pretrained embedding transfers to
+            downstream modules for semantic and instance segmentation,
+            open-vocabulary queries, and 3D scene Q&A. For new 3DGS data,
+            render-and-distill adaptation finetunes the trained encoder from
+            rendered views with online teacher supervision.
+          </p>
+          <figure class="paper-figure pipeline-figure">
+            <a
+              href="media/chorus_pipeline.pdf"
+              aria-label="Open pipeline figure PDF"
+            >
+              <img
+                src="media/chorus_pipeline_transparent.png"
+                alt="Chorus pretraining pipeline"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+          </figure>
+
+          <div class="method-results-block">
+            <span id="results" class="anchor-alias" aria-hidden="true"></span>
+            <p class="eyebrow">3DGS Results</p>
+            <h2>Zero-Shot 3D Semantic Segmentation</h2>
+            <p class="section-lead">
+              The core 3DGS evaluation is zero-shot fine-grained segmentation:
+              the encoder produces language-aligned scene features without
+              task-specific training on the target labels. Chorus improves over
+              SceneSplat across these 3DGS semantic benchmarks while remaining
+              compact and feed-forward.
+            </p>
+            <figure class="bare-figure result-figure">
+              <img
+                src="media/results/zero_shot_semseg_cropped_transparent.png"
+                alt="Zero-shot 3D semantic segmentation comparison for Mosaic3D, SceneSplat, and Chorus"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>
+                Zero-shot fine-grained segmentation: Chorus improves
+                foreground-mIoU over SceneSplat on ScanNet200, Matterport3D,
+                ScanNet++, and InteriorGS.
+              </figcaption>
+            </figure>
+            <div
+              class="stat-grid"
+              aria-label="Zero-shot segmentation highlights"
+            >
+              <article class="stat-card">
+                <strong>+2.1</strong>
+                <span>foreground-mIoU on ScanNet200 vs. SceneSplat</span>
+              </article>
+              <article class="stat-card">
+                <strong>+5.7</strong>
+                <span
+                  >foreground-mIoU on InteriorGS for novel-scene
+                  generalization</span
+                >
+              </article>
+              <article class="stat-card">
+                <strong>8.32×</strong>
+                <span>fewer training scenes than Mosaic3D</span>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section one-more" id="one-more-thing">
+          <p class="eyebrow">One More Thing</p>
+          <h2>The Same Recipe Trains a Strong Point-Cloud Encoder</h2>
+          <p class="section-lead">
+            This is the surprising part: Chorus does not need a new pretraining
+            framework nor new data for building point clouds encoder. We keep
+            the same multi-teacher distillation pipeline and change only the
+            encoder input channels.
+          </p>
+
+          <div
+            class="input-swap-diagram input-swap-diagram-two"
+            aria-label="Same Chorus framework with input channels changed from 3DGS to point-cloud-compatible Chorus"
+          >
+            <div
+              class="same-objective same-objective-left"
+              aria-label="same Chorus framework"
+            >
+              <span>same Chorus framework</span>
+              <strong>multi-teacher distillation</strong>
+              <div class="teacher-stack teacher-stack-inline">
+                <span>SigLIP2</span>
+                <span>DINOv3</span>
+                <span>PE-Spatial</span>
+              </div>
+            </div>
+            <article
+              class="input-card input-morph-card"
+              data-input-swap
+              aria-label="Animated input component change"
+            >
+              <div class="morph-title morph-title-before">
+                <p class="diagram-kicker">Before</p>
+                <h3>3DGS input</h3>
+              </div>
+              <div class="morph-title morph-title-after" aria-hidden="true">
+                <p class="diagram-kicker">After</p>
+                <h3>Point-cloud-format input</h3>
+              </div>
+              <div class="token-row token-morph-row">
+                <span class="input-token keep"
+                  ><span class="token-shell">coord</span></span
+                >
+                <span class="input-token keep"
+                  ><span class="token-shell">color</span></span
+                >
+                <span class="input-token retire token-retired"
+                  ><span class="token-shell">scale</span></span
+                >
+                <span class="input-token retire token-retired"
+                  ><span class="token-shell">opacity</span></span
+                >
+                <span class="input-token retire token-retired"
+                  ><span class="token-shell">quat</span></span
+                >
+                <span class="input-token keep token-after-only"
+                  ><span class="token-shell">estimated normals</span></span
+                >
+              </div>
+            </article>
+          </div>
+          <p class="compact-note">
+            Full 3DGS Chorus consumes position, color, scale, opacity, and
+            orientation. The point-cloud variant consumes only Gaussian centers,
+            colors, and estimated normals; all teachers, losses, and
+            distillation stages stay unchanged. At inference, the trained
+            variant operates as a point-cloud encoder.
+          </p>
+
+          <figure class="bare-figure wide-result-figure pc-summary-figure">
+            <img
+              src="media/results/pointcloud_segmentation_summary_transparent.png"
+              alt="Segmentation probing and finetuning comparison between Sonata and Chorus"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>
+              Point-cloud variant performance: semantic segmentation probing,
+              instance segmentation probing, and training-scene and -label
+              efficiency evaluation.
+            </figcaption>
+          </figure>
+
+          <div class="analysis-heading single-analysis-heading">
+            <h3>Why does Chorus framework transfer to point clouds?</h3>
+          </div>
+          <p class="analysis-lead">
+            We link three hypotheses with explanations: 3DGS pretraining acts
+            like structured augmentation, multi-teacher supervision scales more
+            efficiently than the self-supervised learning route, and
+            heterogeneous teachers contribute complementary but alignable
+            signals.
+          </p>
+          <div
+            class="reason-row"
+            aria-label="Main reasons for point-cloud transfer"
+          >
+            <article>
+              <span>(i)</span>
+              <strong>Noise-robust features.</strong>
+              <p>
+                Clean-to-perturbed retrieval and iPhone RGB-D probing show that
+                the point-cloud variant remains stable under input noise and
+                data capture changes.
+              </p>
+            </article>
+            <article>
+              <span>(ii)</span>
+              <strong>Efficient scaling.</strong>
+              <p>
+                Scene-level self-supervised trained encoder on 3DGS is less
+                competitive in our ablations; distilling foundation-model
+                features scales faster as training scenes increase.
+              </p>
+            </article>
+            <article>
+              <span>(iii)</span>
+              <strong>Complementary teachers.</strong>
+              <p>
+                SigLIP2/PE-Spatial supply language-aligned and object-aware
+                cues, DINOv3 supplies generalist structure, and per-teacher
+                projectors keep idiosyncrasies from competing in one output
+                embedding space.
+              </p>
+            </article>
+          </div>
+
+          <div class="analysis-evidence">
+            <section
+              class="evidence-section evidence-section-noise"
+              aria-labelledby="noise-evidence-title"
+            >
+              <div class="evidence-copy">
+                <h4 id="noise-evidence-title">
+                  Evidence for (i): robustness under perturbation and capture
+                  shift
+                </h4>
+                <p>
+                  Chorus retrieves perturbed instances more reliably than
+                  Sonata, and probing performance remains strong when ScanNet++
+                  input changes from laser scans to iPhone RGB-D point clouds.
+                </p>
+              </div>
+              <div class="evidence-media-row noise-media-row">
+                <a
+                  href="media/results/perturbed_instance_retrival.pdf"
+                  aria-label="Open instance retrieval PDF"
+                >
+                  <img
+                    src="media/results/perturbed_instance_retrival_transparent.png"
+                    alt="Instance retrieval from point cloud to perturbed point cloud"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </a>
+                <a
+                  href="media/results/robustness_to_iphone_rgbd.pdf"
+                  aria-label="Open iPhone RGB-D robustness PDF"
+                >
+                  <img
+                    src="media/results/robustness_to_iphone_rgbd_transparent.png"
+                    alt="Robustness to iPhone RGB-D captures"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </a>
+              </div>
+            </section>
+
+            <section
+              class="evidence-section evidence-section-umap"
+              aria-labelledby="umap-evidence-title"
+            >
+              <div class="evidence-copy">
+                <h4 id="umap-evidence-title">
+                  Feature-space check: compact and separated clusters
+                </h4>
+                <p>
+                  UMAP on per-point features from 15 semantic classes gives a
+                  direct view of the learned embedding. Chorus forms tighter
+                  within-instance clusters and clearer inter-class margins than
+                  Sonata.
+                </p>
+              </div>
+              <div
+                class="umap-media-row"
+                aria-label="UMAP comparison between Sonata and Chorus features"
+              >
+                <figure>
+                  <a
+                    href="media/results/sonata_pc_sem_scatter_umap_C15_K1_size_cap1000.pdf"
+                    aria-label="Open Sonata UMAP PDF"
+                  >
+                    <img
+                      src="media/results/sonata_umap_transparent.png"
+                      alt="Sonata feature UMAP with scattered and overlapping clusters"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </a>
+                  <figcaption>Sonata SSL point-cloud encoder</figcaption>
+                </figure>
+                <figure>
+                  <a
+                    href="media/results/chorus_pc_sem_scatter_umap_C15_K1_size_cap1000_no_legend.pdf"
+                    aria-label="Open Chorus UMAP PDF"
+                  >
+                    <img
+                      src="media/results/chorus_umap_transparent.png"
+                      alt="Chorus feature UMAP with compact and separated clusters"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </a>
+                  <figcaption>Chorus point-cloud variant</figcaption>
+                </figure>
+              </div>
+            </section>
+
+            <section
+              class="evidence-section evidence-section-scale"
+              aria-labelledby="scale-evidence-title"
+            >
+              <div class="evidence-copy">
+                <h4 id="scale-evidence-title">
+                  Evidence for (ii) and (iii): scaling and teacher contribution
+                </h4>
+                <p>
+                  The scaling trend shows the performance and efficiency gains
+                  of multi-teacher pretraining, while the teacher ablation shows
+                  that DINOv3 and PE-Spatial add consistent gains and
+                  generalization beyond language supervision alone.
+                </p>
+              </div>
+              <div class="evidence-media-row scale-teacher-row">
+                <figure>
+                  <img
+                    src="media/results/scaling_trend_transparent.png"
+                    alt="Scaling trend comparing SSL pretraining and Chorus pretraining"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <figcaption>
+                    Multi-teacher pretraining scales faster and reaches higher
+                    linear-probing mIoU than self-supervised pretraining.
+                  </figcaption>
+                </figure>
+                <figure>
+                  <a
+                    href="media/results/teacher_ablation_table.pdf"
+                    aria-label="Open teacher ablation PDF"
+                  >
+                    <img
+                      src="media/results/teacher_ablation_table_transparent.png"
+                      alt="Teacher ablation table showing added teachers improve performance"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </a>
+                  <figcaption>
+                    Added teachers drive gains on ScanNet++ and InteriorGS
+                    generalization.
+                  </figcaption>
+                </figure>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <section class="section applications" id="applications">
+          <p class="eyebrow">Applications</p>
+          <h3 class="subsection-title application-subtitle">
+            3D Scene Question Answering
+          </h3>
+          <p class="section-lead">
+            Chorus can be dropped into
+            <a
+              href="https://insait-institute.github.io/gaussianvlm.github.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GaussianVLM</a
+            >
+            as the 3DGS scene encoder. Using only final-stage Chorus features in
+            place of SceneSplat improves key ScanQA/Nr3D metrics while providing
+            a lighter token interface and reducing training time to about 0.68×
+            that of the SceneSplat-based GaussianVLM.
+          </p>
+          <div class="application-figures qa-figure-grid">
+            <figure class="bare-figure qa-figure-card">
+              <div class="qa-media-wrap">
+                <img
+                  src="media/results/scene_qa_summary_cropped_transparent.png"
+                  alt="3D scene question answering quantitative comparison"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <figcaption>
+                Quantitative Q&amp;A: Chorus-based GaussianVLM improves on
+                ScanQA/Nr3D benchmarks.
+              </figcaption>
+            </figure>
+            <figure class="bare-figure qa-figure-card qualitative-figure-card">
+              <a
+                class="qa-media-wrap"
+                href="media/results/fig_vlm.pdf"
+                aria-label="Open VLM qualitative PDF"
+              >
+                <img
+                  src="media/results/fig_vlm.png"
+                  alt="GaussianVLM qualitative examples comparing Chorus and SceneSplat"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </a>
+              <figcaption>
+                Qualitative Q&amp;A examples: Chorus-based GaussianVLM answers
+                the grounded object queries correctly.
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="online-demo-block application-demo">
+            <h3 class="subsection-title">Online Demo with Chorus Encoder</h3>
+            <div class="demo-lead-row">
+              <p class="section-lead demo-lead">
+                Chorus encoder on point-cloud and 3DGS scenes.
+              </p>
+              <button
+                class="demo-video-toggle"
+                type="button"
+                data-demo-video-toggle
+                aria-label="Pause demo videos"
+                aria-pressed="false"
+              >
+                <svg class="pause-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="7" y="5" width="3.8" height="14" rx="1.2"></rect>
+                  <rect x="13.2" y="5" width="3.8" height="14" rx="1.2"></rect>
+                </svg>
+                <svg class="play-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M8 5.8v12.4c0 .9 1 1.45 1.78.97l9.15-6.2a1.13 1.13 0 0 0 0-1.94L9.78 4.83C9 4.35 8 4.9 8 5.8Z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+            <div class="video-grid">
+              <article class="demo-video-card">
+                <p>Point-cloud scene</p>
+                <video
+                  class="lazy-video"
+                  muted
+                  loop
+                  playsinline
+                  preload="metadata"
+                  poster="media/posters/embodied_pcl_00643.jpg"
+                  data-src="media/videos/embodied_pcl_00643.mp4"
+                ></video>
+              </article>
+              <article class="demo-video-card">
+                <p>Point-cloud scene</p>
+                <video
+                  class="lazy-video"
+                  muted
+                  loop
+                  playsinline
+                  preload="metadata"
+                  poster="media/posters/embodied_pcl_00823.jpg"
+                  data-src="media/videos/embodied_pcl_00823.mp4"
+                ></video>
+              </article>
+              <article class="demo-video-card">
+                <p>3DGS scene</p>
+                <video
+                  class="lazy-video"
+                  muted
+                  loop
+                  playsinline
+                  preload="metadata"
+                  poster="media/posters/embodied_3dgs_00800.jpg"
+                  data-src="media/videos/embodied_3dgs_00800.mp4"
+                ></video>
+              </article>
+              <article class="demo-video-card">
+                <p>3DGS scene</p>
+                <video
+                  class="lazy-video"
+                  muted
+                  loop
+                  playsinline
+                  preload="metadata"
+                  poster="media/posters/embodied_3dgs_00831.jpg"
+                  data-src="media/videos/embodied_3dgs_00831.mp4"
+                ></video>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="bibtex">
+          <p class="eyebrow">Citation</p>
+          <div class="citation-heading-row citation-actions-only">
+            <button class="copy-button" type="button" aria-label="Copy BibTeX">
+              <svg
+                class="clipboard"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"
+                ></path>
+                <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                <line x1="8" y1="10" x2="16" y2="10"></line>
+                <line x1="8" y1="14" x2="16" y2="14"></line>
+                <line x1="8" y1="18" x2="13" y2="18"></line>
+              </svg>
+              <svg
+                class="check"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="20,6 9,17 4,12"></polyline>
+              </svg>
+            </button>
+          </div>
+          <div class="bibtex-container">
+            <pre id="bibtex-content">
+@InProceedings{Li_2026_CVPR,
+    author    = {Li, Yue and Ma, Qi and Yang, Runyi and Ma, Mengjiao and Ren, Bin and Popovic, Nikola and Sebe, Nicu and Gevers, Theo and Van Gool, Luc and Paudel, Danda Pani and Oswald, Martin R.},
+    title     = {Chorus: Multi-Teacher Pretraining for Holistic 3D Gaussian Scene Encoding},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2026},
+    pages     = {21431-21442}
+}</pre
+            >
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <p>
+        This website is licensed under the
+        <a
+          href="https://creativecommons.org/licenses/by-sa/4.0/"
+          target="_blank"
+          rel="license noopener noreferrer"
+          >CC BY-SA 4.0</a
+        >. The interactive 3DGS demo uses the
+        <a href="https://sparkjs.dev/" target="_blank" rel="noopener noreferrer"
+          >Spark</a
+        >
+        module.
+      </p>
+    </footer>
+    <div
+      class="citation-toast"
+      data-citation-toast
+      role="status"
+      aria-live="polite"
+    >
+      Citation copied to clipboard
+    </div>
+
+    <script type="module" src="static/js/main.js"></script>
+  </body>
+</html>

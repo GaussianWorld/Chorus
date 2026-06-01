@@ -1,0 +1,1024 @@
+{
+  "datasets": [
+    {
+      "id": "interiorgs",
+      "name": "InteriorGS",
+      "scenes": [
+        {
+          "id": "interiorgs-0001-839920",
+          "sourceId": "0001_839920",
+          "dataset": "interiorgs",
+          "label": "0001",
+          "title": "InteriorGS 0001",
+          "zMax": 2.95,
+          "rawSplats": 925467,
+          "keptSplats": 878399,
+          "pointCount": 219600,
+          "bboxMin": [
+            -3.19531,
+            -9.86719,
+            -0.69531
+          ],
+          "bboxMax": [
+            11.46094,
+            3.07031,
+            2.94922
+          ],
+          "rgb3dgs": "media/splats/interiorgs-0001-839920_rgb_3dgs.spz",
+          "pca3dgs": "media/splats/interiorgs-0001-839920_pca_3dgs.spz",
+          "pcaPoints": "media/splats/interiorgs-0001-839920_pca_points.ply",
+          "thumbnail": "media/thumbnails/interiorgs/interiorgs-0001-839920.jpg"
+        },
+        {
+          "id": "interiorgs-0008-840170",
+          "sourceId": "0008_840170",
+          "dataset": "interiorgs",
+          "label": "0008",
+          "title": "InteriorGS 0008",
+          "zMax": 4.02,
+          "rawSplats": 467134,
+          "keptSplats": 444295,
+          "pointCount": 222148,
+          "bboxMin": [
+            -9.19531,
+            -9.53125,
+            -1.72559
+          ],
+          "bboxMax": [
+            18.79688,
+            8.25,
+            4.01953
+          ],
+          "rgb3dgs": "media/splats/interiorgs-0008-840170_rgb_3dgs.spz",
+          "pca3dgs": "media/splats/interiorgs-0008-840170_pca_3dgs.spz",
+          "pcaPoints": "media/splats/interiorgs-0008-840170_pca_points.ply",
+          "thumbnail": "media/thumbnails/interiorgs/interiorgs-0008-840170.jpg"
+        },
+        {
+          "id": "interiorgs-0009-840175",
+          "sourceId": "0009_840175",
+          "dataset": "interiorgs",
+          "label": "0009",
+          "title": "InteriorGS 0009",
+          "zMax": 3.74,
+          "rawSplats": 1175184,
+          "keptSplats": 1115829,
+          "pointCount": 223166,
+          "bboxMin": [
+            -4.8125,
+            -6.17188,
+            -0.50781
+          ],
+          "bboxMax": [
+            7.33984,
+            2.44922,
+            3.73828
+          ],
+          "rgb3dgs": "media/splats/interiorgs-0009-840175_rgb_3dgs.spz",
+          "pca3dgs": "media/splats/interiorgs-0009-840175_pca_3dgs.spz",
+          "pcaPoints": "media/splats/interiorgs-0009-840175_pca_points.ply",
+          "thumbnail": "media/thumbnails/interiorgs/interiorgs-0009-840175.jpg"
+        },
+        {
+          "id": "interiorgs-0011-840866",
+          "sourceId": "0011_840866",
+          "dataset": "interiorgs",
+          "label": "0011",
+          "title": "InteriorGS 0011",
+          "zMax": 2.74,
+          "rawSplats": 540271,
+          "keptSplats": 514173,
+          "pointCount": 257087,
+          "bboxMin": [
+            -8.47656,
+            -6.59375,
+            -0.64258
+          ],
+          "bboxMax": [
+            2.87109,
+            6.79688,
+            2.73828
+          ],
+          "rgb3dgs": "media/splats/interiorgs-0011-840866_rgb_3dgs.spz",
+          "pca3dgs": "media/splats/interiorgs-0011-840866_pca_3dgs.spz",
+          "pcaPoints": "media/splats/interiorgs-0011-840866_pca_points.ply",
+          "thumbnail": "media/thumbnails/interiorgs/interiorgs-0011-840866.jpg"
+        },
+        {
+          "id": "interiorgs-0026-839976",
+          "sourceId": "0026_839976",
+          "dataset": "interiorgs",
+          "label": "0026",
+          "title": "InteriorGS 0026",
+          "zMax": 3.08,
+          "rawSplats": 1491072,
+          "keptSplats": 1416435,
+          "pointCount": 236073,
+          "bboxMin": [
+            -23.42188,
+            -11.96875,
+            -1.1582
+          ],
+          "bboxMax": [
+            -8.38281,
+            7.87109,
+            3.07812
+          ],
+          "rgb3dgs": "media/splats/interiorgs-0026-839976_rgb_3dgs.spz",
+          "pca3dgs": "media/splats/interiorgs-0026-839976_pca_3dgs.spz",
+          "pcaPoints": "media/splats/interiorgs-0026-839976_pca_points.ply",
+          "thumbnail": "media/thumbnails/interiorgs/interiorgs-0026-839976.jpg"
+        },
+        {
+          "id": "interiorgs-0027-839914",
+          "sourceId": "0027_839914",
+          "dataset": "interiorgs",
+          "label": "0027",
+          "title": "InteriorGS 0027",
+          "zMax": 2.6,
+          "rawSplats": 960910,
+          "keptSplats": 912179,
+          "pointCount": 228045,
+          "bboxMin": [
+            -7.20703,
+            -5.66406,
+            -0.58594
+          ],
+          "bboxMax": [
+            5.13281,
+            4.48828,
+            2.59961
+          ],
+          "rgb3dgs": "media/splats/interiorgs-0027-839914_rgb_3dgs.spz",
+          "pca3dgs": "media/splats/interiorgs-0027-839914_pca_3dgs.spz",
+          "pcaPoints": "media/splats/interiorgs-0027-839914_pca_points.ply",
+          "thumbnail": "media/thumbnails/interiorgs/interiorgs-0027-839914.jpg"
+        },
+        {
+          "id": "interiorgs-0032-839877",
+          "sourceId": "0032_839877",
+          "dataset": "interiorgs",
+          "label": "0032",
+          "title": "InteriorGS 0032",
+          "zMax": 2.99,
+          "rawSplats": 1177307,
+          "keptSplats": 1116885,
+          "pointCount": 223377,
+          "bboxMin": [
+            -3.95508,
+            -11.25781,
+            -1.43066
+          ],
+          "bboxMax": [
+            12.21094,
+            5.62109,
+            2.98828
+          ],
+          "rgb3dgs": "media/splats/interiorgs-0032-839877_rgb_3dgs.spz",
+          "pca3dgs": "media/splats/interiorgs-0032-839877_pca_3dgs.spz",
+          "pcaPoints": "media/splats/interiorgs-0032-839877_pca_points.ply",
+          "thumbnail": "media/thumbnails/interiorgs/interiorgs-0032-839877.jpg"
+        },
+        {
+          "id": "interiorgs-0054-839895",
+          "sourceId": "0054_839895",
+          "dataset": "interiorgs",
+          "label": "0054",
+          "title": "InteriorGS 0054",
+          "zMax": 3.76,
+          "rawSplats": 700039,
+          "keptSplats": 664631,
+          "pointCount": 221544,
+          "bboxMin": [
+            -6.66016,
+            -12.86719,
+            -1.11621
+          ],
+          "bboxMax": [
+            19.85938,
+            3.27734,
+            3.75977
+          ],
+          "rgb3dgs": "media/splats/interiorgs-0054-839895_rgb_3dgs.spz",
+          "pca3dgs": "media/splats/interiorgs-0054-839895_pca_3dgs.spz",
+          "pcaPoints": "media/splats/interiorgs-0054-839895_pca_points.ply",
+          "thumbnail": "media/thumbnails/interiorgs/interiorgs-0054-839895.jpg"
+        }
+      ]
+    },
+    {
+      "id": "hm3d",
+      "name": "HM3D",
+      "scenes": [
+        {
+          "id": "hm3d-00643-ggnacmh8jpt",
+          "sourceId": "00643-ggNAcMh8JPT",
+          "dataset": "hm3d",
+          "label": "00643",
+          "title": "HM3D 00643",
+          "zMax": 4.87,
+          "rawSplats": 1499992,
+          "keptSplats": 1425284,
+          "pointCount": 237548,
+          "bboxMin": [
+            -11.39844,
+            -2.00781,
+            -2.75781
+          ],
+          "bboxMax": [
+            3.64258,
+            7.21875,
+            4.86719
+          ],
+          "rgb3dgs": "media/splats/hm3d-00643-ggnacmh8jpt_rgb_3dgs.spz",
+          "pca3dgs": "media/splats/hm3d-00643-ggnacmh8jpt_pca_3dgs.spz",
+          "pcaPoints": "media/splats/hm3d-00643-ggnacmh8jpt_pca_points.ply",
+          "thumbnail": "media/thumbnails/hm3d/hm3d-00643-ggnacmh8jpt.jpg"
+        },
+        {
+          "id": "hm3d-00800-teesavr23of",
+          "sourceId": "00800-TEEsavR23oF",
+          "dataset": "hm3d",
+          "label": "00800",
+          "title": "HM3D 00800",
+          "zMax": 5.84,
+          "rawSplats": 1499992,
+          "keptSplats": 1428649,
+          "pointCount": 238109,
+          "bboxMin": [
+            -12.4375,
+            -1.14844,
+            -0.23193
+          ],
+          "bboxMax": [
+            4.12891,
+            9.90625,
+            5.83984
+          ],
+          "rgb3dgs": "media/splats/hm3d-00800-teesavr23of_rgb_3dgs.spz",
+          "pca3dgs": "media/splats/hm3d-00800-teesavr23of_pca_3dgs.spz",
+          "pcaPoints": "media/splats/hm3d-00800-teesavr23of_pca_points.ply",
+          "thumbnail": "media/thumbnails/hm3d/hm3d-00800-teesavr23of.jpg"
+        },
+        {
+          "id": "hm3d-00802-wcojb4tft35",
+          "sourceId": "00802-wcojb4TFT35",
+          "dataset": "hm3d",
+          "label": "00802",
+          "title": "HM3D 00802",
+          "zMax": 4.78,
+          "rawSplats": 1499996,
+          "keptSplats": 1427327,
+          "pointCount": 237888,
+          "bboxMin": [
+            -3.66016,
+            -1.73047,
+            -2.59375
+          ],
+          "bboxMax": [
+            7.07031,
+            19.04688,
+            4.77734
+          ],
+          "rgb3dgs": "media/splats/hm3d-00802-wcojb4tft35_rgb_3dgs.spz",
+          "pca3dgs": "media/splats/hm3d-00802-wcojb4tft35_pca_3dgs.spz",
+          "pcaPoints": "media/splats/hm3d-00802-wcojb4tft35_pca_points.ply",
+          "thumbnail": "media/thumbnails/hm3d/hm3d-00802-wcojb4tft35.jpg"
+        },
+        {
+          "id": "hm3d-00808-y9htuuggdiq",
+          "sourceId": "00808-y9hTuugGdiq",
+          "dataset": "hm3d",
+          "label": "00808",
+          "title": "HM3D 00808",
+          "zMax": 5.31,
+          "rawSplats": 1499990,
+          "keptSplats": 1427045,
+          "pointCount": 237841,
+          "bboxMin": [
+            -12.66406,
+            -6.07031,
+            -3.12109
+          ],
+          "bboxMax": [
+            9.77344,
+            3.73047,
+            5.30859
+          ],
+          "rgb3dgs": "media/splats/hm3d-00808-y9htuuggdiq_rgb_3dgs.spz",
+          "pca3dgs": "media/splats/hm3d-00808-y9htuuggdiq_pca_3dgs.spz",
+          "pcaPoints": "media/splats/hm3d-00808-y9htuuggdiq_pca_points.ply",
+          "thumbnail": "media/thumbnails/hm3d/hm3d-00808-y9htuuggdiq.jpg"
+        },
+        {
+          "id": "hm3d-00820-ml8thkuavtm",
+          "sourceId": "00820-mL8ThkuaVTM",
+          "dataset": "hm3d",
+          "label": "00820",
+          "title": "HM3D 00820",
+          "zMax": 5.12,
+          "rawSplats": 1499998,
+          "keptSplats": 1424830,
+          "pointCount": 237472,
+          "bboxMin": [
+            -1.79004,
+            -2.87109,
+            -2.77539
+          ],
+          "bboxMax": [
+            9.82812,
+            2.53906,
+            5.11719
+          ],
+          "rgb3dgs": "media/splats/hm3d-00820-ml8thkuavtm_rgb_3dgs.spz",
+          "pca3dgs": "media/splats/hm3d-00820-ml8thkuavtm_pca_3dgs.spz",
+          "pcaPoints": "media/splats/hm3d-00820-ml8thkuavtm_pca_points.ply",
+          "thumbnail": "media/thumbnails/hm3d/hm3d-00820-ml8thkuavtm.jpg"
+        },
+        {
+          "id": "hm3d-00823-7mxmsvcqjpj",
+          "sourceId": "00823-7MXmsvcQjpJ",
+          "dataset": "hm3d",
+          "label": "00823",
+          "title": "HM3D 00823",
+          "zMax": 6.14,
+          "rawSplats": 1499998,
+          "keptSplats": 1424905,
+          "pointCount": 237485,
+          "bboxMin": [
+            -11.0625,
+            -5.12891,
+            -4.36719
+          ],
+          "bboxMax": [
+            5.96875,
+            6.70703,
+            6.13672
+          ],
+          "rgb3dgs": "media/splats/hm3d-00823-7mxmsvcqjpj_rgb_3dgs.spz",
+          "pca3dgs": "media/splats/hm3d-00823-7mxmsvcqjpj_pca_3dgs.spz",
+          "pcaPoints": "media/splats/hm3d-00823-7mxmsvcqjpj_pca_points.ply",
+          "thumbnail": "media/thumbnails/hm3d/hm3d-00823-7mxmsvcqjpj.jpg"
+        },
+        {
+          "id": "hm3d-00831-yr17pdcnddw",
+          "sourceId": "00831-yr17PDCnDDW",
+          "dataset": "hm3d",
+          "label": "00831",
+          "title": "HM3D 00831",
+          "zMax": 5.48,
+          "rawSplats": 1499987,
+          "keptSplats": 1424055,
+          "pointCount": 237343,
+          "bboxMin": [
+            -20.375,
+            -9.15625,
+            -1.33301
+          ],
+          "bboxMax": [
+            1.07129,
+            10.92188,
+            5.47656
+          ],
+          "rgb3dgs": "media/splats/hm3d-00831-yr17pdcnddw_rgb_3dgs.spz",
+          "pca3dgs": "media/splats/hm3d-00831-yr17pdcnddw_pca_3dgs.spz",
+          "pcaPoints": "media/splats/hm3d-00831-yr17pdcnddw_pca_points.ply",
+          "thumbnail": "media/thumbnails/hm3d/hm3d-00831-yr17pdcnddw.jpg"
+        },
+        {
+          "id": "hm3d-00891-cvzr5tuy5c5",
+          "sourceId": "00891-cvZr5TUy5C5",
+          "dataset": "hm3d",
+          "label": "00891",
+          "title": "HM3D 00891",
+          "zMax": 5.61,
+          "rawSplats": 1499988,
+          "keptSplats": 1424989,
+          "pointCount": 237499,
+          "bboxMin": [
+            -11.53906,
+            -11.30469,
+            -3.12305
+          ],
+          "bboxMax": [
+            5.19531,
+            4.99219,
+            5.60938
+          ],
+          "rgb3dgs": "media/splats/hm3d-00891-cvzr5tuy5c5_rgb_3dgs.spz",
+          "pca3dgs": "media/splats/hm3d-00891-cvzr5tuy5c5_pca_3dgs.spz",
+          "pcaPoints": "media/splats/hm3d-00891-cvzr5tuy5c5_pca_points.ply",
+          "thumbnail": "media/thumbnails/hm3d/hm3d-00891-cvzr5tuy5c5.jpg"
+        }
+      ]
+    },
+    {
+      "id": "marble",
+      "name": "Marble",
+      "scenes": [
+        {
+          "id": "marble-elegant-library-with-fireplace-500k-t03-xn-zn-yn-rot",
+          "sourceId": "elegant_library_with_fireplace_500k_t03_xn_zn_yn_rot",
+          "dataset": "marble",
+          "label": "Library",
+          "title": "Marble Library",
+          "zMax": 2.1,
+          "rawSplats": 500000,
+          "keptSplats": 476271,
+          "pointCount": 238136,
+          "bboxMin": [
+            -2.74194,
+            -4.49341,
+            -1.98413
+          ],
+          "bboxMax": [
+            2.28345,
+            7.49097,
+            2.09985
+          ],
+          "rgb3dgs": "media/splats/marble-elegant-library-with-fireplace-500k-t03-xn-zn-yn-rot_rgb_3dgs.spz",
+          "pca3dgs": "media/splats/marble-elegant-library-with-fireplace-500k-t03-xn-zn-yn-rot_pca_3dgs.spz",
+          "pcaPoints": "media/splats/marble-elegant-library-with-fireplace-500k-t03-xn-zn-yn-rot_pca_points.ply",
+          "thumbnail": "media/thumbnails/marble/marble-elegant-library-with-fireplace-500k-t03-xn-zn-yn-rot.jpg"
+        },
+        {
+          "id": "marble-narrow-european-cobblestone-lane-500k-t03-xn-zn-yn-rot-edit",
+          "sourceId": "narrow_european_cobblestone_lane_500k_t03_xn_zn_yn_rot_edit",
+          "dataset": "marble",
+          "label": "Lane",
+          "title": "Marble Lane",
+          "zMax": 3.02,
+          "rawSplats": 445765,
+          "keptSplats": 441281,
+          "pointCount": 220641,
+          "bboxMin": [
+            -2.03906,
+            -4.86768,
+            -0.66943
+          ],
+          "bboxMax": [
+            2.1748,
+            4.81494,
+            3.01978
+          ],
+          "rgb3dgs": "media/splats/marble-narrow-european-cobblestone-lane-500k-t03-xn-zn-yn-rot-edit_rgb_3dgs.spz",
+          "pca3dgs": "media/splats/marble-narrow-european-cobblestone-lane-500k-t03-xn-zn-yn-rot-edit_pca_3dgs.spz",
+          "pcaPoints": "media/splats/marble-narrow-european-cobblestone-lane-500k-t03-xn-zn-yn-rot-edit_pca_points.ply",
+          "thumbnail": "media/thumbnails/marble/marble-narrow-european-cobblestone-lane-500k-t03-xn-zn-yn-rot-edit.jpg"
+        },
+        {
+          "id": "marble-rustic-kitchen-with-natural-light-500k-t03-xn-zn-yn-rot",
+          "sourceId": "rustic_kitchen_with_natural_light_500k_t03_xn_zn_yn_rot",
+          "dataset": "marble",
+          "label": "Rustic Kitchen",
+          "title": "Marble Rustic Kitchen",
+          "zMax": 1.17,
+          "rawSplats": 500000,
+          "keptSplats": 472938,
+          "pointCount": 236469,
+          "bboxMin": [
+            -2.07031,
+            -6.42627,
+            -4.77588
+          ],
+          "bboxMax": [
+            5.82178,
+            3.7002,
+            1.16992
+          ],
+          "rgb3dgs": "media/splats/marble-rustic-kitchen-with-natural-light-500k-t03-xn-zn-yn-rot_rgb_3dgs.spz",
+          "pca3dgs": "media/splats/marble-rustic-kitchen-with-natural-light-500k-t03-xn-zn-yn-rot_pca_3dgs.spz",
+          "pcaPoints": "media/splats/marble-rustic-kitchen-with-natural-light-500k-t03-xn-zn-yn-rot_pca_points.ply",
+          "thumbnail": "media/thumbnails/marble/marble-rustic-kitchen-with-natural-light-500k-t03-xn-zn-yn-rot.jpg"
+        },
+        {
+          "id": "marble-warm-traditional-kitchen-interior-500k-t03-xn-zn-yn-rot",
+          "sourceId": "warm_traditional_kitchen_interior_500k_t03_xn_zn_yn_rot",
+          "dataset": "marble",
+          "label": "Warm Kitchen",
+          "title": "Marble Warm Kitchen",
+          "zMax": 1.19,
+          "rawSplats": 500000,
+          "keptSplats": 481554,
+          "pointCount": 240777,
+          "bboxMin": [
+            -1.87671,
+            -4.81982,
+            -1.30151
+          ],
+          "bboxMax": [
+            1.55371,
+            2.43164,
+            1.18994
+          ],
+          "rgb3dgs": "media/splats/marble-warm-traditional-kitchen-interior-500k-t03-xn-zn-yn-rot_rgb_3dgs.spz",
+          "pca3dgs": "media/splats/marble-warm-traditional-kitchen-interior-500k-t03-xn-zn-yn-rot_pca_3dgs.spz",
+          "pcaPoints": "media/splats/marble-warm-traditional-kitchen-interior-500k-t03-xn-zn-yn-rot_pca_points.ply",
+          "thumbnail": "media/thumbnails/marble/marble-warm-traditional-kitchen-interior-500k-t03-xn-zn-yn-rot.jpg"
+        }
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "interiorgs-0001-839920",
+      "sourceId": "0001_839920",
+      "dataset": "interiorgs",
+      "label": "0001",
+      "title": "InteriorGS 0001",
+      "zMax": 2.95,
+      "rawSplats": 925467,
+      "keptSplats": 878399,
+      "pointCount": 219600,
+      "bboxMin": [
+        -3.19531,
+        -9.86719,
+        -0.69531
+      ],
+      "bboxMax": [
+        11.46094,
+        3.07031,
+        2.94922
+      ],
+      "rgb3dgs": "media/splats/interiorgs-0001-839920_rgb_3dgs.spz",
+      "pca3dgs": "media/splats/interiorgs-0001-839920_pca_3dgs.spz",
+      "pcaPoints": "media/splats/interiorgs-0001-839920_pca_points.ply",
+      "thumbnail": "media/thumbnails/interiorgs/interiorgs-0001-839920.jpg"
+    },
+    {
+      "id": "interiorgs-0008-840170",
+      "sourceId": "0008_840170",
+      "dataset": "interiorgs",
+      "label": "0008",
+      "title": "InteriorGS 0008",
+      "zMax": 4.02,
+      "rawSplats": 467134,
+      "keptSplats": 444295,
+      "pointCount": 222148,
+      "bboxMin": [
+        -9.19531,
+        -9.53125,
+        -1.72559
+      ],
+      "bboxMax": [
+        18.79688,
+        8.25,
+        4.01953
+      ],
+      "rgb3dgs": "media/splats/interiorgs-0008-840170_rgb_3dgs.spz",
+      "pca3dgs": "media/splats/interiorgs-0008-840170_pca_3dgs.spz",
+      "pcaPoints": "media/splats/interiorgs-0008-840170_pca_points.ply",
+      "thumbnail": "media/thumbnails/interiorgs/interiorgs-0008-840170.jpg"
+    },
+    {
+      "id": "interiorgs-0009-840175",
+      "sourceId": "0009_840175",
+      "dataset": "interiorgs",
+      "label": "0009",
+      "title": "InteriorGS 0009",
+      "zMax": 3.74,
+      "rawSplats": 1175184,
+      "keptSplats": 1115829,
+      "pointCount": 223166,
+      "bboxMin": [
+        -4.8125,
+        -6.17188,
+        -0.50781
+      ],
+      "bboxMax": [
+        7.33984,
+        2.44922,
+        3.73828
+      ],
+      "rgb3dgs": "media/splats/interiorgs-0009-840175_rgb_3dgs.spz",
+      "pca3dgs": "media/splats/interiorgs-0009-840175_pca_3dgs.spz",
+      "pcaPoints": "media/splats/interiorgs-0009-840175_pca_points.ply",
+      "thumbnail": "media/thumbnails/interiorgs/interiorgs-0009-840175.jpg"
+    },
+    {
+      "id": "interiorgs-0011-840866",
+      "sourceId": "0011_840866",
+      "dataset": "interiorgs",
+      "label": "0011",
+      "title": "InteriorGS 0011",
+      "zMax": 2.74,
+      "rawSplats": 540271,
+      "keptSplats": 514173,
+      "pointCount": 257087,
+      "bboxMin": [
+        -8.47656,
+        -6.59375,
+        -0.64258
+      ],
+      "bboxMax": [
+        2.87109,
+        6.79688,
+        2.73828
+      ],
+      "rgb3dgs": "media/splats/interiorgs-0011-840866_rgb_3dgs.spz",
+      "pca3dgs": "media/splats/interiorgs-0011-840866_pca_3dgs.spz",
+      "pcaPoints": "media/splats/interiorgs-0011-840866_pca_points.ply",
+      "thumbnail": "media/thumbnails/interiorgs/interiorgs-0011-840866.jpg"
+    },
+    {
+      "id": "interiorgs-0026-839976",
+      "sourceId": "0026_839976",
+      "dataset": "interiorgs",
+      "label": "0026",
+      "title": "InteriorGS 0026",
+      "zMax": 3.08,
+      "rawSplats": 1491072,
+      "keptSplats": 1416435,
+      "pointCount": 236073,
+      "bboxMin": [
+        -23.42188,
+        -11.96875,
+        -1.1582
+      ],
+      "bboxMax": [
+        -8.38281,
+        7.87109,
+        3.07812
+      ],
+      "rgb3dgs": "media/splats/interiorgs-0026-839976_rgb_3dgs.spz",
+      "pca3dgs": "media/splats/interiorgs-0026-839976_pca_3dgs.spz",
+      "pcaPoints": "media/splats/interiorgs-0026-839976_pca_points.ply",
+      "thumbnail": "media/thumbnails/interiorgs/interiorgs-0026-839976.jpg"
+    },
+    {
+      "id": "interiorgs-0027-839914",
+      "sourceId": "0027_839914",
+      "dataset": "interiorgs",
+      "label": "0027",
+      "title": "InteriorGS 0027",
+      "zMax": 2.6,
+      "rawSplats": 960910,
+      "keptSplats": 912179,
+      "pointCount": 228045,
+      "bboxMin": [
+        -7.20703,
+        -5.66406,
+        -0.58594
+      ],
+      "bboxMax": [
+        5.13281,
+        4.48828,
+        2.59961
+      ],
+      "rgb3dgs": "media/splats/interiorgs-0027-839914_rgb_3dgs.spz",
+      "pca3dgs": "media/splats/interiorgs-0027-839914_pca_3dgs.spz",
+      "pcaPoints": "media/splats/interiorgs-0027-839914_pca_points.ply",
+      "thumbnail": "media/thumbnails/interiorgs/interiorgs-0027-839914.jpg"
+    },
+    {
+      "id": "interiorgs-0032-839877",
+      "sourceId": "0032_839877",
+      "dataset": "interiorgs",
+      "label": "0032",
+      "title": "InteriorGS 0032",
+      "zMax": 2.99,
+      "rawSplats": 1177307,
+      "keptSplats": 1116885,
+      "pointCount": 223377,
+      "bboxMin": [
+        -3.95508,
+        -11.25781,
+        -1.43066
+      ],
+      "bboxMax": [
+        12.21094,
+        5.62109,
+        2.98828
+      ],
+      "rgb3dgs": "media/splats/interiorgs-0032-839877_rgb_3dgs.spz",
+      "pca3dgs": "media/splats/interiorgs-0032-839877_pca_3dgs.spz",
+      "pcaPoints": "media/splats/interiorgs-0032-839877_pca_points.ply",
+      "thumbnail": "media/thumbnails/interiorgs/interiorgs-0032-839877.jpg"
+    },
+    {
+      "id": "interiorgs-0054-839895",
+      "sourceId": "0054_839895",
+      "dataset": "interiorgs",
+      "label": "0054",
+      "title": "InteriorGS 0054",
+      "zMax": 3.76,
+      "rawSplats": 700039,
+      "keptSplats": 664631,
+      "pointCount": 221544,
+      "bboxMin": [
+        -6.66016,
+        -12.86719,
+        -1.11621
+      ],
+      "bboxMax": [
+        19.85938,
+        3.27734,
+        3.75977
+      ],
+      "rgb3dgs": "media/splats/interiorgs-0054-839895_rgb_3dgs.spz",
+      "pca3dgs": "media/splats/interiorgs-0054-839895_pca_3dgs.spz",
+      "pcaPoints": "media/splats/interiorgs-0054-839895_pca_points.ply",
+      "thumbnail": "media/thumbnails/interiorgs/interiorgs-0054-839895.jpg"
+    },
+    {
+      "id": "hm3d-00643-ggnacmh8jpt",
+      "sourceId": "00643-ggNAcMh8JPT",
+      "dataset": "hm3d",
+      "label": "00643",
+      "title": "HM3D 00643",
+      "zMax": 4.87,
+      "rawSplats": 1499992,
+      "keptSplats": 1425284,
+      "pointCount": 237548,
+      "bboxMin": [
+        -11.39844,
+        -2.00781,
+        -2.75781
+      ],
+      "bboxMax": [
+        3.64258,
+        7.21875,
+        4.86719
+      ],
+      "rgb3dgs": "media/splats/hm3d-00643-ggnacmh8jpt_rgb_3dgs.spz",
+      "pca3dgs": "media/splats/hm3d-00643-ggnacmh8jpt_pca_3dgs.spz",
+      "pcaPoints": "media/splats/hm3d-00643-ggnacmh8jpt_pca_points.ply",
+      "thumbnail": "media/thumbnails/hm3d/hm3d-00643-ggnacmh8jpt.jpg"
+    },
+    {
+      "id": "hm3d-00800-teesavr23of",
+      "sourceId": "00800-TEEsavR23oF",
+      "dataset": "hm3d",
+      "label": "00800",
+      "title": "HM3D 00800",
+      "zMax": 5.84,
+      "rawSplats": 1499992,
+      "keptSplats": 1428649,
+      "pointCount": 238109,
+      "bboxMin": [
+        -12.4375,
+        -1.14844,
+        -0.23193
+      ],
+      "bboxMax": [
+        4.12891,
+        9.90625,
+        5.83984
+      ],
+      "rgb3dgs": "media/splats/hm3d-00800-teesavr23of_rgb_3dgs.spz",
+      "pca3dgs": "media/splats/hm3d-00800-teesavr23of_pca_3dgs.spz",
+      "pcaPoints": "media/splats/hm3d-00800-teesavr23of_pca_points.ply",
+      "thumbnail": "media/thumbnails/hm3d/hm3d-00800-teesavr23of.jpg"
+    },
+    {
+      "id": "hm3d-00802-wcojb4tft35",
+      "sourceId": "00802-wcojb4TFT35",
+      "dataset": "hm3d",
+      "label": "00802",
+      "title": "HM3D 00802",
+      "zMax": 4.78,
+      "rawSplats": 1499996,
+      "keptSplats": 1427327,
+      "pointCount": 237888,
+      "bboxMin": [
+        -3.66016,
+        -1.73047,
+        -2.59375
+      ],
+      "bboxMax": [
+        7.07031,
+        19.04688,
+        4.77734
+      ],
+      "rgb3dgs": "media/splats/hm3d-00802-wcojb4tft35_rgb_3dgs.spz",
+      "pca3dgs": "media/splats/hm3d-00802-wcojb4tft35_pca_3dgs.spz",
+      "pcaPoints": "media/splats/hm3d-00802-wcojb4tft35_pca_points.ply",
+      "thumbnail": "media/thumbnails/hm3d/hm3d-00802-wcojb4tft35.jpg"
+    },
+    {
+      "id": "hm3d-00808-y9htuuggdiq",
+      "sourceId": "00808-y9hTuugGdiq",
+      "dataset": "hm3d",
+      "label": "00808",
+      "title": "HM3D 00808",
+      "zMax": 5.31,
+      "rawSplats": 1499990,
+      "keptSplats": 1427045,
+      "pointCount": 237841,
+      "bboxMin": [
+        -12.66406,
+        -6.07031,
+        -3.12109
+      ],
+      "bboxMax": [
+        9.77344,
+        3.73047,
+        5.30859
+      ],
+      "rgb3dgs": "media/splats/hm3d-00808-y9htuuggdiq_rgb_3dgs.spz",
+      "pca3dgs": "media/splats/hm3d-00808-y9htuuggdiq_pca_3dgs.spz",
+      "pcaPoints": "media/splats/hm3d-00808-y9htuuggdiq_pca_points.ply",
+      "thumbnail": "media/thumbnails/hm3d/hm3d-00808-y9htuuggdiq.jpg"
+    },
+    {
+      "id": "hm3d-00820-ml8thkuavtm",
+      "sourceId": "00820-mL8ThkuaVTM",
+      "dataset": "hm3d",
+      "label": "00820",
+      "title": "HM3D 00820",
+      "zMax": 5.12,
+      "rawSplats": 1499998,
+      "keptSplats": 1424830,
+      "pointCount": 237472,
+      "bboxMin": [
+        -1.79004,
+        -2.87109,
+        -2.77539
+      ],
+      "bboxMax": [
+        9.82812,
+        2.53906,
+        5.11719
+      ],
+      "rgb3dgs": "media/splats/hm3d-00820-ml8thkuavtm_rgb_3dgs.spz",
+      "pca3dgs": "media/splats/hm3d-00820-ml8thkuavtm_pca_3dgs.spz",
+      "pcaPoints": "media/splats/hm3d-00820-ml8thkuavtm_pca_points.ply",
+      "thumbnail": "media/thumbnails/hm3d/hm3d-00820-ml8thkuavtm.jpg"
+    },
+    {
+      "id": "hm3d-00823-7mxmsvcqjpj",
+      "sourceId": "00823-7MXmsvcQjpJ",
+      "dataset": "hm3d",
+      "label": "00823",
+      "title": "HM3D 00823",
+      "zMax": 6.14,
+      "rawSplats": 1499998,
+      "keptSplats": 1424905,
+      "pointCount": 237485,
+      "bboxMin": [
+        -11.0625,
+        -5.12891,
+        -4.36719
+      ],
+      "bboxMax": [
+        5.96875,
+        6.70703,
+        6.13672
+      ],
+      "rgb3dgs": "media/splats/hm3d-00823-7mxmsvcqjpj_rgb_3dgs.spz",
+      "pca3dgs": "media/splats/hm3d-00823-7mxmsvcqjpj_pca_3dgs.spz",
+      "pcaPoints": "media/splats/hm3d-00823-7mxmsvcqjpj_pca_points.ply",
+      "thumbnail": "media/thumbnails/hm3d/hm3d-00823-7mxmsvcqjpj.jpg"
+    },
+    {
+      "id": "hm3d-00831-yr17pdcnddw",
+      "sourceId": "00831-yr17PDCnDDW",
+      "dataset": "hm3d",
+      "label": "00831",
+      "title": "HM3D 00831",
+      "zMax": 5.48,
+      "rawSplats": 1499987,
+      "keptSplats": 1424055,
+      "pointCount": 237343,
+      "bboxMin": [
+        -20.375,
+        -9.15625,
+        -1.33301
+      ],
+      "bboxMax": [
+        1.07129,
+        10.92188,
+        5.47656
+      ],
+      "rgb3dgs": "media/splats/hm3d-00831-yr17pdcnddw_rgb_3dgs.spz",
+      "pca3dgs": "media/splats/hm3d-00831-yr17pdcnddw_pca_3dgs.spz",
+      "pcaPoints": "media/splats/hm3d-00831-yr17pdcnddw_pca_points.ply",
+      "thumbnail": "media/thumbnails/hm3d/hm3d-00831-yr17pdcnddw.jpg"
+    },
+    {
+      "id": "hm3d-00891-cvzr5tuy5c5",
+      "sourceId": "00891-cvZr5TUy5C5",
+      "dataset": "hm3d",
+      "label": "00891",
+      "title": "HM3D 00891",
+      "zMax": 5.61,
+      "rawSplats": 1499988,
+      "keptSplats": 1424989,
+      "pointCount": 237499,
+      "bboxMin": [
+        -11.53906,
+        -11.30469,
+        -3.12305
+      ],
+      "bboxMax": [
+        5.19531,
+        4.99219,
+        5.60938
+      ],
+      "rgb3dgs": "media/splats/hm3d-00891-cvzr5tuy5c5_rgb_3dgs.spz",
+      "pca3dgs": "media/splats/hm3d-00891-cvzr5tuy5c5_pca_3dgs.spz",
+      "pcaPoints": "media/splats/hm3d-00891-cvzr5tuy5c5_pca_points.ply",
+      "thumbnail": "media/thumbnails/hm3d/hm3d-00891-cvzr5tuy5c5.jpg"
+    },
+    {
+      "id": "marble-elegant-library-with-fireplace-500k-t03-xn-zn-yn-rot",
+      "sourceId": "elegant_library_with_fireplace_500k_t03_xn_zn_yn_rot",
+      "dataset": "marble",
+      "label": "Library",
+      "title": "Marble Library",
+      "zMax": 2.1,
+      "rawSplats": 500000,
+      "keptSplats": 476271,
+      "pointCount": 238136,
+      "bboxMin": [
+        -2.74194,
+        -4.49341,
+        -1.98413
+      ],
+      "bboxMax": [
+        2.28345,
+        7.49097,
+        2.09985
+      ],
+      "rgb3dgs": "media/splats/marble-elegant-library-with-fireplace-500k-t03-xn-zn-yn-rot_rgb_3dgs.spz",
+      "pca3dgs": "media/splats/marble-elegant-library-with-fireplace-500k-t03-xn-zn-yn-rot_pca_3dgs.spz",
+      "pcaPoints": "media/splats/marble-elegant-library-with-fireplace-500k-t03-xn-zn-yn-rot_pca_points.ply",
+      "thumbnail": "media/thumbnails/marble/marble-elegant-library-with-fireplace-500k-t03-xn-zn-yn-rot.jpg"
+    },
+    {
+      "id": "marble-narrow-european-cobblestone-lane-500k-t03-xn-zn-yn-rot-edit",
+      "sourceId": "narrow_european_cobblestone_lane_500k_t03_xn_zn_yn_rot_edit",
+      "dataset": "marble",
+      "label": "Lane",
+      "title": "Marble Lane",
+      "zMax": 3.02,
+      "rawSplats": 445765,
+      "keptSplats": 441281,
+      "pointCount": 220641,
+      "bboxMin": [
+        -2.03906,
+        -4.86768,
+        -0.66943
+      ],
+      "bboxMax": [
+        2.1748,
+        4.81494,
+        3.01978
+      ],
+      "rgb3dgs": "media/splats/marble-narrow-european-cobblestone-lane-500k-t03-xn-zn-yn-rot-edit_rgb_3dgs.spz",
+      "pca3dgs": "media/splats/marble-narrow-european-cobblestone-lane-500k-t03-xn-zn-yn-rot-edit_pca_3dgs.spz",
+      "pcaPoints": "media/splats/marble-narrow-european-cobblestone-lane-500k-t03-xn-zn-yn-rot-edit_pca_points.ply",
+      "thumbnail": "media/thumbnails/marble/marble-narrow-european-cobblestone-lane-500k-t03-xn-zn-yn-rot-edit.jpg"
+    },
+    {
+      "id": "marble-rustic-kitchen-with-natural-light-500k-t03-xn-zn-yn-rot",
+      "sourceId": "rustic_kitchen_with_natural_light_500k_t03_xn_zn_yn_rot",
+      "dataset": "marble",
+      "label": "Rustic Kitchen",
+      "title": "Marble Rustic Kitchen",
+      "zMax": 1.17,
+      "rawSplats": 500000,
+      "keptSplats": 472938,
+      "pointCount": 236469,
+      "bboxMin": [
+        -2.07031,
+        -6.42627,
+        -4.77588
+      ],
+      "bboxMax": [
+        5.82178,
+        3.7002,
+        1.16992
+      ],
+      "rgb3dgs": "media/splats/marble-rustic-kitchen-with-natural-light-500k-t03-xn-zn-yn-rot_rgb_3dgs.spz",
+      "pca3dgs": "media/splats/marble-rustic-kitchen-with-natural-light-500k-t03-xn-zn-yn-rot_pca_3dgs.spz",
+      "pcaPoints": "media/splats/marble-rustic-kitchen-with-natural-light-500k-t03-xn-zn-yn-rot_pca_points.ply",
+      "thumbnail": "media/thumbnails/marble/marble-rustic-kitchen-with-natural-light-500k-t03-xn-zn-yn-rot.jpg"
+    },
+    {
+      "id": "marble-warm-traditional-kitchen-interior-500k-t03-xn-zn-yn-rot",
+      "sourceId": "warm_traditional_kitchen_interior_500k_t03_xn_zn_yn_rot",
+      "dataset": "marble",
+      "label": "Warm Kitchen",
+      "title": "Marble Warm Kitchen",
+      "zMax": 1.19,
+      "rawSplats": 500000,
+      "keptSplats": 481554,
+      "pointCount": 240777,
+      "bboxMin": [
+        -1.87671,
+        -4.81982,
+        -1.30151
+      ],
+      "bboxMax": [
+        1.55371,
+        2.43164,
+        1.18994
+      ],
+      "rgb3dgs": "media/splats/marble-warm-traditional-kitchen-interior-500k-t03-xn-zn-yn-rot_rgb_3dgs.spz",
+      "pca3dgs": "media/splats/marble-warm-traditional-kitchen-interior-500k-t03-xn-zn-yn-rot_pca_3dgs.spz",
+      "pcaPoints": "media/splats/marble-warm-traditional-kitchen-interior-500k-t03-xn-zn-yn-rot_pca_points.ply",
+      "thumbnail": "media/thumbnails/marble/marble-warm-traditional-kitchen-interior-500k-t03-xn-zn-yn-rot.jpg"
+    }
+  ]
+}

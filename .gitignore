@@ -1,0 +1,14 @@
+.DS_Store
+**/.DS_Store
+*.tmp
+*.bak
+*.orig
+*.log
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.cache/
+node_modules/
+media/splats/pending_conversions.json
+AGENTS.md
+scripts/
